@@ -215,6 +215,9 @@ class _HeatMapCalendar extends State<HeatMapCalendar> {
         children: <Widget>[
           _header(),
           _weekLabel(),
+          const SizedBox(
+            height: 8,
+          ),
           HeatMapCalendarPage(
             baseDate: _currentDate ?? DateTime.now(),
             colorMode: widget.colorMode,
@@ -228,6 +231,9 @@ class _HeatMapCalendar extends State<HeatMapCalendar> {
             colorsets: widget.colorsets,
             borderRadius: widget.borderRadius,
             onClick: widget.onClick,
+          ),
+          const SizedBox(
+            height: 8,
           ),
           if (widget.showColorTip == true)
             HeatMapColorTip(
